@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:javascript="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>车牌识别</title>
+</head>
+<body>
+<!--    <form method="post" th:action="@{/rec/submit}">-->
+<!--        <input name="imgForm" style="width: 400px; height: 50px" type="file" accept="image/jpg"/>-->
+<!--        <br/>-->
+<!--        <button type="submit">识别</button>-->
+<!--    </form>-->
+    <div class="container" style="text-align: center">
+
+        <form method="post" th:action="@{/rec/submit}">
+            <h2 style="font-size: 30px">车牌识别</h2>
+            <br><br>
+            <label for="imgForm" >请选择图片:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="imgForm" style="color: darkcyan; width: 250px" type="file" accept="image/jpg" id="imgForm" placeholder="请选择图片" required autofocus>
+            <br><br><br>
+            <label for="parkingId">请填写车库号:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="parkingId" style="width: 250px" type="number" min="1001" max="9999" id="parkingId" placeholder="请填写车库号" required>
+            <br><br><br>
+            <button type="submit" style="border-color: mediumaquamarine; font-size: 20px">识别并上传</button>
+        </form>
+
+    </div> <!-- /container -->
+</body>
+</html>
